@@ -3,6 +3,7 @@
     <p>
         <%= message.title %>
         <%= message.content %>
-        <%= link_to "詳細", message_path(message.id)>
+        <%= link_to "詳細", messages_path(message.id)>
+        <%= link_to "編集", edit_message_path(message.id)>
     </p>
 <% end %>
