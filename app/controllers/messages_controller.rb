@@ -18,6 +18,11 @@ class MessagesController < ApplicationController
         @message = Message.find(params[:id])
     end
 
+    def destroy
+        message = Message.find(params[:id])
+        message.destroy
+    end
+
     private
     def user_params
         params.require(:message).permit(:title, :content)
