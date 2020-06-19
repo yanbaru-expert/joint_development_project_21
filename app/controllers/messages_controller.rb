@@ -1,7 +1,8 @@
 class MessagesController < ApplicationController
     def index
         @messages = Message.all
-    
+    end
+
     def new
         @message = Message.new
     end
@@ -18,13 +19,18 @@ class MessagesController < ApplicationController
         @message = Message.find(params[:id])
     end
 
+    def update
+        message = Message.find(params[:id])
+        message.update(message_params)
+    end
+
     def destroy
         message = Message.find(params[:id])
-        message.destroy
+        message.delete
     end
 
     private
-    def user_params
+    def message_params
         params.require(:message).permit(:title, :content)
     end
 end
