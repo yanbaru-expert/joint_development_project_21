@@ -1,4 +1,4 @@
-Rails.application.routes.draw d
-    resources :messages
-  resources :users
+Rails.application.routes.draw do
+    resources :users
+  resources :messages
 end
