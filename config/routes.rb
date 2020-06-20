@@ -1,7 +1,4 @@
-Rails.application.routes.draw do
-<<<<<<< HEAD
+Rails.application.routes.draw d
     resources :messages
-=======
   resources :users
->>>>>>> master
 end
