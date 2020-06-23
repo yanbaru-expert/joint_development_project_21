@@ -1,0 +1,11 @@
+<h1>メッセージ一覧</h1>
+
+<%= link_to "投稿画面へ", new_task_path %><br>
+
+<% @tasks.each do |task| %>
+  <%= task.title %>
+  <%= link_to "詳細", task_path(task) %>
+  <%= link_to "編集", edit_task_path(task) %>
+  
+
+<% end %>
